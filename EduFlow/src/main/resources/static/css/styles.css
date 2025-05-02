@@ -1,0 +1,498 @@
+:root {
+    --primary-color: #6c5ce7;
+    --secondary-color: #a29bfe;
+    --accent-color: #00cec9;
+    --text-color: #f5f6fa;
+    --bg-color: #2d3436;
+    --card-bg: #3a4042;
+    --input-bg: #4a5254;
+    --error-color: #ff7675;
+    --success-color: #55efc4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:
+            radial-gradient(circle at 10% 20%, rgba(108, 92, 231, 0.1) 0%, transparent 20%),
+            radial-gradient(circle at 90% 80%, rgba(0, 206, 201, 0.1) 0%, transparent 20%);
+}
+
+.container {
+    display: flex;
+    max-width: 1000px;
+    width: 90%;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.logo-container {
+    flex: 1;
+    padding: 40px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.logo-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.tagline {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.registration-form {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.registration-form h2 {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--accent-color);
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 38px;
+    color: var(--secondary-color);
+}
+
+.password-strength {
+    display: flex;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+.strength-bar {
+    flex: 1;
+    height: 4px;
+    background-color: #636e72;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin-right: 10px;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+}
+
+.checkbox-group a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.checkbox-group a:hover {
+    text-decoration: underline;
+}
+
+.submit-btn {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    display: block; /* Ensure it's treated as block element */
+    width: 100%; /* Match input field width */
+    position: relative; /* For z-index if needed */
+    z-index: 10; /* Ensure it stays above other elements */
+    opacity: 1 !important; /* Force visibility */
+    visibility: visible !important; /* Force visibility */
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .logo-container {
+        padding: 30px 20px;
+    }
+
+    .registration-form {
+        padding: 30px 20px;
+    }
+}
+
+/* Error states */
+.error input, .error select {
+    border: 1px solid var(--error-color);
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.success-message {
+    color: var(--success-color);
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+/* Add these to your existing styles.css */
+.login-form {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form h2 {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: 8px;
+}
+
+.forgot-password a {
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.social-login {
+    margin: 25px 0;
+    text-align: center;
+    position: relative;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.social-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.social-icon i {
+    font-size: 18px;
+    display: block;
+}
+
+/* Hover effects */
+.social-icon:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Specific icon colors */
+.social-icon.google {
+    background-color: #db4437;
+}
+.social-icon.facebook {
+    background-color: #4267B2;
+}
+.social-icon.microsoft {
+    background-color: #00A1F1;
+}
+
+/* Divider lines */
+.social-login p {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #b2bec3;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-login p::before,
+.social-login p::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #636e72;
+    margin: 0 10px;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.register-link a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Add these to your existing styles.css */
+.success-message i {
+    font-size: 3rem;
+    color: var(--success-color);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.loader {
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--accent-color);
+    margin: 20px auto;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Add transition for smooth hover effects */
+.social-icon,
+.submit-btn,
+.form-group input,
+.form-group select {
+    transition: all 0.5s ease;
+}
+
+/* Pulse animation for success icon */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.success-message i {
+    animation: pulse 2s infinite;
+}
+
+
+/* main style */
+/* Index Page Specific Styles */
+.welcome-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-content h2 {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.feature-card {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.secondary-btn {
+    padding: 14px 30px;
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+.secondary-btn:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.testimonial {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.testimonial::before {
+    content: '\201C';
+    font-size: 4rem;
+    color: var(--accent-color);
+    opacity: 0.2;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.testimonial blockquote {
+    font-style: italic;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial .author {
+    text-align: right;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .feature-card {
+        padding: 20px;
+    }
+}

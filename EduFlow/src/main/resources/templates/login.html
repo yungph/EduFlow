@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | EduFlow Academy</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css}">
+    <!-- Replace your current Font Awesome link with this -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="logo-container">
+        <i class="fas fa-graduation-cap logo-icon"></i>
+        <h1>EduFlow Academy</h1>
+        <p class="tagline">Continue your learning journey</p>
+    </div>
+
+    <form id="loginForm" class="login-form">
+        <h2>Welcome Back</h2>
+
+        <div class="form-group">
+            <label for="loginEmail">Email Address</label>
+            <input type="email" id="loginEmail" name="email" required>
+            <i class="fas fa-envelope input-icon"></i>
+        </div>
+
+        <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" name="password" required>
+            <i class="fas fa-lock input-icon"></i>
+            <div class="forgot-password">
+                <a href="#">Forgot password?</a>
+            </div>
+        </div>
+
+        <div class="form-group checkbox-group">
+            <input type="checkbox" id="rememberMe" name="rememberMe">
+            <label for="rememberMe">Remember me</label>
+        </div>
+
+        <button type="submit" class="submit-btn">Log In</button>
+
+
+        <div class="social-login">
+            <p>Or log in with:</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon google" aria-label="Login with Google">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="#" class="social-icon facebook" aria-label="Login with Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon microsoft" aria-label="Login with Microsoft">
+                    <i class="fab fa-microsoft"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="register-link">
+            Don't have an account? <a href="/register">Register now</a>
+        </div>
+    </form>
+</div>
+
+<script src="/js/script-login.js"></script>
+</body>
+</html>

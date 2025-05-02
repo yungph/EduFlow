@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | EduFlow Academy</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="logo-container">
+        <i class="fas fa-graduation-cap logo-icon"></i>
+        <h1>EduFlow Academy</h1>
+        <p class="tagline">Unlock your potential through quality education</p>
+    </div>
+
+    <div class="welcome-content">
+        <h2>Welcome to Your Learning Journey</h2>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-laptop-code feature-icon"></i>
+                <h3>Interactive Courses</h3>
+                <p>Engage with hands-on learning experiences designed by industry experts.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-chalkboard-teacher feature-icon"></i>
+                <h3>Expert Instructors</h3>
+                <p>Learn from professionals with real-world experience in their fields.</p>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-certificate feature-icon"></i>
+                <h3>Certification</h3>
+                <p>Earn recognized certificates to boost your career prospects.</p>
+            </div>
+        </div>
+
+        <div class="cta-buttons">
+            <a href="register" class="submit-btn">Get Started</a>
+            <a href="new-login" class="secondary-btn">Log In</a>
+        </div>
+
+        <div class="testimonial">
+            <blockquote>
+                "EduFlow Academy transformed my career with their comprehensive courses and supportive community."
+            </blockquote>
+            <div class="author">- Sarah Johnson, Data Scientist</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Animation for page elements
+        gsap.from(".logo-container", {
+            duration: 1,
+            x: -50,
+            opacity: 0,
+            ease: "back.out(1.2)"
+        });
+
+        gsap.from(".welcome-content h2", {
+            duration: 0.8,
+            y: -30,
+            opacity: 0,
+            delay: 0.3,
+            ease: "elastic.out(1, 0.5)"
+        });
+
+        gsap.from(".feature-card", {
+            duration: 0.6,
+            y: 20,
+            opacity: 0,
+            stagger: 0.2,
+            delay: 0.6,
+            ease: "power2.out"
+        });
+
+        gsap.from(".cta-buttons", {
+            duration: 0.8,
+            scale: 0.8,
+            opacity: 0,
+            delay: 1,
+            ease: "back.out(1.2)"
+        });
+    });
+</script>
+</body>
+</html>
